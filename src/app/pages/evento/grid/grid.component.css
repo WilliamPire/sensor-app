@@ -1,0 +1,4 @@
+.content-container{ padding: 10px }
+button { margin-bottom: 15px }
+.mat-column-number, .mat-column-state { max-width: 64px }
+.mat-column-created { max-width: 124px }
