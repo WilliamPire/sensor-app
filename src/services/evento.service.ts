@@ -9,7 +9,8 @@ import { Page } from 'src/models/page.model';
 })
 export class EventoService {
 
-    private apiPath: string = 'http://localhost:58416/api/evento';
+    private apiPath: string = 'https://sensor.azurewebsites.net/api/evento';
+    //private apiPath: string = 'http://localhost:58416/api/evento';
 
     constructor(private http: HttpClient) { }
     

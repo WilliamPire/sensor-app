@@ -1,0 +1,4 @@
+.grafico-left{height: 350px; width: 48%; background-color: #f1f1f1;float: left;margin-top: 30px;}
+.grafico-right{height: 350px; width: 48%; background-color: #f1f1f1;float: right;margin-top: 30px;margin-bottom: 20px}
+h4 {padding-left: 20px; margin-top: 7px; color: #666666; font-size: 15px}
+.l-none {list-style: none;}

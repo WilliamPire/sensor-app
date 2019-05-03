@@ -1,10 +1,19 @@
 <div class="container">
-  <div class="mat-elevation-z8"
-    style="height: 350px; width: 48%; background-color: #f1f1f1;float: left;margin-top: 30px;">
+  <div class="mat-elevation-z8 grafico-left">
+    <div class="container-loading-shade" *ngIf="isLoadingResults">
+      <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+    </div>
     <p-chart [data]="data" [options]="options" [responsive]="true" height="320" width="400" type="doughnut"></p-chart>
   </div>
-  <div class="mat-elevation-z8"
-    style="height: 350px; width: 48%; background-color: #f1f1f1;float: right;margin-top: 30px;margin-bottom: 20px">
-    <p-chart [data]="data2" [options]="options2" [responsive]="true" height="320" width="400" type="bar"></p-chart>
+  <div class="mat-elevation-z8 grafico-right">
+    <h4>Totalizador de Eventos </h4>
+    <ul class="l-none" *ngFor="let sensorRegiao of sensoresRegiao">
+      <li><b>{{sensorRegiao.total}}</b> - {{sensorRegiao.regiao}} </li>
+      <li>
+        <ul class="l-none" *ngFor="let sensor of sensorRegiao.totalizadorSensores">
+            <li><b>{{sensor.total}} - </b>{{sensor.sensor}}</li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>

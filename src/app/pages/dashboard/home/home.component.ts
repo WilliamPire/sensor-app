@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from 'src/services/dashboard.service';
+import { Consolidado } from 'src/models/consolidado.model';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,15 @@ export class HomeComponent implements OnInit {
 
   data: any;
   options: any;
-  data2: any;
-  options2: any;
+  sensoresRegiao: Consolidado[] = [];
+
+  isLoadingResults = true;
 
   constructor(private service: DashboardService) { }
 
   ngOnInit() {
 
     this.service.listarGrafico().subscribe(res => {
-      debugger;
       this.data = {
         labels: res.labels,
         datasets: [
@@ -46,34 +47,20 @@ export class HomeComponent implements OnInit {
           position: 'left'
         }
       };
-
+      this.isLoadingResults = false;
     }, (err) => {
-
+      console.error(err);
+      this.isLoadingResults = false;
     });
 
+    this.service.listarConsolidado().subscribe(res => {
+      this.sensoresRegiao = res;
+      this.isLoadingResults = false;
+    }, (err) => {
+      console.error(err);
+      this.isLoadingResults = false;
+    });
 
-
-    this.data2 = {
-      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
-      datasets: [
-        {
-          backgroundColor: '#9CCC65',
-          borderColor: '#7CB342',
-          data: [28, 48, 40, 19, 86, 27, 90]
-        }
-      ]
-    }
-
-    this.options2 = {
-      title: {
-        display: true,
-        text: 'Crescimento Escolas Estados',
-        fontSize: 16
-      },
-      legend: {
-        display: false
-      }
-    };
   }
 
 }
