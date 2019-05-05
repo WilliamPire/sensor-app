@@ -1,27 +1,38 @@
-# SensorApp
+<img src="https://www.comotrabalhar.org/wp-content/uploads/2016/06/trabalhar-na-radix.jpg" height="50px" alt="Desafio Radix"> 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
-## Development server
+# Sensor APP
+O objetivo projetoo implementado em Angular 7 é exibir o gráfico com o resultado do processamento e a os registros enviados pelos eventos de sensores.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Como usar:
+- O projeto pode ser acessado diretamente em https://sensor-radix.azurewebsites.net/.
 
-## Code scaffolding
+## Para acessar local:
+- Você deverá ter a versão recomendada do note instalada que pode ser obtida em https://nodejs.org/en/.
+- O Vs Code instaladao na versão mais recentes podem se baixado em https://code.visualstudio.com/.
+- Você precisará fazer o clone do repositório.
+- Você deverar abrir pelo Vs Code a paste aonde foi os arquivos foram clonados do repositorio.
+- Abra um novo terminal no Vs Code e execute `ng serve` para um servidor dev. Navegue até `http: // localhost: 4200 /`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Tecnologias implementadas:
+
+Este projeto foi gerado com [CLI Angular] (https://github.com/angular/angular-cli) versão 7.3.8.
+
+## Ideias
+- Gostaria de ter feito um grafio com os totalizadores por sensores e região e um filtro por região ou sensor no grid para filtrar os registros.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Execute `ng build` para construir o projeto. Os artefatos de construção serão armazenados no diretório `dist /`. Use o sinalizador `--prod` para uma construção de produção.
 
-## Running unit tests
+## Testes de unidade em execução
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para executar os testes unitários via [Karma] (https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Executando testes de ponta a ponta
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Execute `ng e2e` para executar os testes de ponta a ponta via [Protractor] (http://www.protractortest.org/).
 
-## Further help
+## Ajuda adicional
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Para obter mais ajuda sobre o Angular CLI use `ng help` ou vá conferir o [Angular CLI README] (https://github.com/angular/angular-cli/blob/master/README.md).

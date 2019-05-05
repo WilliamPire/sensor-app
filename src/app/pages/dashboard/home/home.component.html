@@ -8,10 +8,10 @@
   <div class="mat-elevation-z8 grafico-right">
     <h4>Totalizador de Eventos </h4>
     <ul class="l-none" *ngFor="let sensorRegiao of sensoresRegiao">
-      <li><b>{{sensorRegiao.total}}</b> - {{sensorRegiao.regiao}} </li>
+      <li>{{sensorRegiao.regiao}} - <b>{{sensorRegiao.total}}</b></li>
       <li>
         <ul class="l-none" *ngFor="let sensor of sensorRegiao.totalizadorSensores">
-            <li><b>{{sensor.total}} - </b>{{sensor.sensor}}</li>
+            <li>{{sensor.sensor}} - <b>{{sensor.total}}</b></li>
         </ul>
       </li>
     </ul>
